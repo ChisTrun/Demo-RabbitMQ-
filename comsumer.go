@@ -34,6 +34,6 @@ func main() {
 	for msg := range msgs {
 		log.Printf("📨 Received: %s", msg.Body)
 		// ✅ Acknowledge = xoá message khỏi queue
-		// msg.Ack(false)
+		msg.Ack(false)
 	}
 }
